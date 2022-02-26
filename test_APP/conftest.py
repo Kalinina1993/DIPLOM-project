@@ -11,7 +11,7 @@ chrome_options.add_argument("--headless")
 
 @pytest.fixture(scope="class")
 def init_driver(request):
-    web_driver = webdriver.Chrome("/home/natasha/PycharmProjects/DIPLOM/chromedriver", )
+    web_driver = webdriver.Chrome("/home/natasha/PycharmProjects/DIPLOM/chromedriver", chrome_options=chrome_options)
     request.cls.driver = web_driver
     web_driver.maximize_window()
     yield web_driver

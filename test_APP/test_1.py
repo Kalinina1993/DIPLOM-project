@@ -127,15 +127,16 @@ class TestAdmin:
         flag = driver.find_element(By.NAME, "q")
         assert flag.is_enabled(), f"Error"
 
+class TestCheck:
     def test_adding_user_in_group(self, init_driver):
         """Checking that creating user_1 added in group_1"""
         driver = init_driver
-        # driver.get("http://localhost:8000/admin/lo")
-        # username = driver.find_element(By.NAME, "username")
-        # username.send_keys("admin")
-        # password = driver.find_element(By.NAME, "password")
-        # password.send_keys("password")
-        # driver.find_element(By.CSS_SELECTOR, "#login-form > div.submit-row > input[type=submit]").click()
+        driver.get("http://localhost:8000/admin/lo")
+        username = driver.find_element(By.NAME, "username")
+        username.send_keys("admin")
+        password = driver.find_element(By.NAME, "password")
+        password.send_keys("password")
+        driver.find_element(By.CSS_SELECTOR, "#login-form > div.submit-row > input[type=submit]").click()
         driver.get("http://localhost:8000/admin/auth/user/")
         driver.find_element(By.CSS_SELECTOR, "#result_list > tbody > tr:nth-child(2) > th > a").click()
         element = driver.find_element(By.CSS_SELECTOR, "#id_groups_to > option")

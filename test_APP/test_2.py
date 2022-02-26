@@ -25,7 +25,9 @@ class TestLoginNewUser:
     def test_new_user_login(self, init_driver):
         """Testing login with new user_2"""
         driver = init_driver
-        driver.get("http://localhost:8000/admin/lo")
+        # driver.get("http://localhost:8000/admin/lo")
+        driver.find_element(By.CSS_SELECTOR, "#user-tools > a:nth-child(4)").click()
+        driver.find_element(By.CSS_SELECTOR, "#content > p:nth-child(3) > a").click()
         username = driver.find_element(By.NAME, "username")
         username.send_keys("user_2")
         password = driver.find_element(By.NAME, "password")

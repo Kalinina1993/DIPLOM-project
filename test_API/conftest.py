@@ -33,16 +33,14 @@ def user_datas():
 
 @pytest.fixture(scope="class")
 def user_username():
-    response = requests.get("https://petstore.swagger.io/v2/user/Kalina",
-                            json={"username": "Kalina"})
+    response = requests.get("https://petstore.swagger.io/v2/user/Kalina")
     return response
 
 
 @pytest.fixture(scope="class")
 def delete_user():
     """User datas for delete"""
-    response = requests.delete("https://petstore.swagger.io/v2/user/Kalina",
-                               json={"username": "Kalina"})
+    response = requests.delete("https://petstore.swagger.io/v2/user/Kalina")
     return response
 
 

@@ -139,7 +139,7 @@ class TestCheck:
         driver.find_element(By.CSS_SELECTOR, "#login-form > div.submit-row > input[type=submit]").click()
         driver.get("http://localhost:8000/admin/auth/user/")
         driver.find_element(By.CSS_SELECTOR, "#result_list > tbody > tr:nth-child(2) > th > a").click()
-        element = driver.find_element(By.CSS_SELECTOR, "#id_groups_to > option")
+        element = driver.find_element(By.ID, "id_groups_to")
         assert "group_1" in element.text
 
 

@@ -26,7 +26,7 @@ def new_user():
 def user_datas():
     """User datas for login"""
     response = requests.get("https://petstore.swagger.io/v2/user/login?username=Kalina&password=8888",
-                            json={"username": "Kalinkina",
+                            json={"username": "Kalina",
                                   "password": "8888"})
     return response
 

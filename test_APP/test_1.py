@@ -140,13 +140,4 @@ class TestCheck:
         driver.get("http://localhost:8000/admin/auth/user/")
         driver.find_element(By.CSS_SELECTOR, "#result_list > tbody > tr:nth-child(2) > th > a").click()
         element = driver.find_element(By.CSS_SELECTOR, "#id_groups_to > option")
-        assert element.is_displayed() 
-
-
-
-
-
-
-
-
-
+        assert element

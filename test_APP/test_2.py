@@ -61,18 +61,13 @@ class TestDeleteImage:
         # password = driver.find_element(By.NAME, "password")
         # password.send_keys("password")
         # driver.find_element(By.CSS_SELECTOR, "#login-form > div.submit-row > input[type=submit]").click()
-        driver.get("http://localhost:8000/admin/app/post/")
-        driver.find_element(By.NAME, "_selected_action").click()
-        action = driver.find_element(By.NAME, "action")
-        action.send_keys("D")
-        driver.find_elements(By.CSS_SELECTOR, "#changelist-form > div.actions > label > select > option:nth-child(2)")
-        driver.find_element(By.CLASS_NAME, "button").click()
-        driver.find_element(By.CSS_SELECTOR, "#content > form > div > input[type=submit]:nth-child(4)").click()
+        # driver.get("http://localhost:8000/admin/app/post/")
+        # driver.find_element(By.NAME, "_selected_action").click()
+        # action = driver.find_element(By.NAME, "action")
+        # action.send_keys("D")
+        # driver.find_elements(By.CSS_SELECTOR, "#changelist-form > div.actions > label > select > option:nth-child(2)")
+        # driver.find_element(By.CLASS_NAME, "button").click()
+        # driver.find_element(By.CSS_SELECTOR, "#content > form > div > input[type=submit]:nth-child(4)").click()
         driver.get("http://localhost:8000/admin/app/post/")
         element = driver.find_element(By.CLASS_NAME, "paginator")
         assert element.text == "0 posts", f"Error"
-
-
-
-
-

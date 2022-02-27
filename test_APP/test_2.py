@@ -69,8 +69,8 @@ class TestDeleteImage:
         driver.find_element(By.CLASS_NAME, "button").click()
         driver.find_element(By.CSS_SELECTOR, "#content > form > div > input[type=submit]:nth-child(4)").click()
         driver.get("http://localhost:8000/admin/app/post/")
-        element = driver.find_element(By.CSS_SELECTOR, "#changelist-form > p")
-        assert element.text == "0 posts", f"There are 1 posts"
+        element = driver.find_element(By.CLASS_NAME, "paginator")
+        assert element.text == "0 posts", f"Error"
 
 
 

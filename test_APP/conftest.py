@@ -18,3 +18,33 @@ def init_driver(request):
     web_driver.maximize_window()
     yield web_driver
     web_driver.quit()
+
+
+@pytest.fixture(scope="class")
+def url_adm():
+    url = "http://localhost:8000/admin"
+    return url
+
+
+@pytest.fixture(scope="class")
+def url_lo():
+    url = "http://localhost:8000/admin/lo"
+    return url
+
+
+@pytest.fixture(scope="class")
+def url_group():
+    url = "http://localhost:8000/admin/auth/group/"
+    return url
+
+
+@pytest.fixture(scope="class")
+def url_user():
+    url = "http://localhost:8000/admin/auth/user/"
+    return url
+
+
+@pytest.fixture(scope="class")
+def url_post():
+    url = "http://localhost:8000/admin/app/post/"
+    return url   

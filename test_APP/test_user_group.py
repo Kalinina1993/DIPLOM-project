@@ -112,4 +112,5 @@ class TestCheck:
         driver.get(url_user)
         driver.find_element(By.CSS_SELECTOR, "#result_list > tbody > tr:nth-child(2) > th > a").click()
         element = driver.find_element(By.CSS_SELECTOR, "#id_groups_to > option")
-        assert element.is_displayed()
+        print(f"user_1 added in", element.text)
+        assert element

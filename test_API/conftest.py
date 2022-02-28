@@ -40,7 +40,7 @@ def user_username():
 @pytest.fixture(scope="class")
 def delete_user():
     """User datas for delete"""
-    response = requests.delete("https://petstore.swagger.io/v2/user/Kalina")
+    response = requests.delete("https://petstore.swagger.io/v2/user/string")
     return response
 
 

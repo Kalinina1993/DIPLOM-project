@@ -105,9 +105,9 @@ class TestCheck:
         driver = init_driver
         driver.get(url_lo)
         username = driver.find_element(By.NAME, "username")
-        username.send_keys("admin")
+        username.send_keys(Datas.username)
         password = driver.find_element(By.NAME, "password")
-        password.send_keys("password")
+        password.send_keys(Datas.password)
         driver.find_element(By.CSS_SELECTOR, "#login-form > div.submit-row > input[type=submit]").click()
         driver.get(url_user)
         driver.find_element(By.CSS_SELECTOR, "#result_list > tbody > tr:nth-child(2) > th > a").click()

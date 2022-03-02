@@ -73,3 +73,5 @@ def add_user_in_group():
 print(create_connection())
 print(create_group())
 print(create_user())
+cursor.close()
+connection.close()
